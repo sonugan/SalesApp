@@ -1,5 +1,6 @@
 package soft.sonugan.salesapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.design.widget.NavigationView
@@ -59,7 +60,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         // Handle navigation view item clicks here.
         when (item.itemId) {
             R.id.nav_camera -> {
-                // Handle the camera action
+                val i = Intent(applicationContext, ProductListActivity::class.java)
+                startActivity(i)
             }
             R.id.nav_gallery -> {
 
