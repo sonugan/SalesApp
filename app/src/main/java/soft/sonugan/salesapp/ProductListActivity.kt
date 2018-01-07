@@ -11,17 +11,27 @@ import android.widget.AdapterView
 import android.widget.BaseAdapter
 import android.widget.ListView
 import android.widget.TextView
+import io.objectbox.Box
 import kotlinx.android.synthetic.main.activity_product_list.*
 import soft.sonugan.salesapp.model.Product
+import soft.sonugan.salesapp.model.Provider
+import java.time.LocalDate
+import java.util.*
 
 class ProductListActivity : AppCompatActivity() {
-    internal var products = arrayOf(Product(id = 1, code = "1234", name = "Carne picada"),
-            Product(id = 2, code = "1235", name = "Salsa de carne"))
+    private lateinit var productBox: Box<Product>
 
+    var product1 = Product("1234", "Carne picada")
+    //product1.provider.setTarget(provider)
+
+    var product2 = Product("1235", "Salsa de carne")
+    internal var products = arrayOf(product1, product2)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_product_list)
+
+     //   productBox = (application as SalesApp).boxStore.boxFor(Product::class.java)
 
         val listView : ListView = productList
         listView.adapter = ProductListAdapter(this, products)
@@ -31,6 +41,10 @@ class ProductListActivity : AppCompatActivity() {
             val selected = adapterView.getItemAtPosition(position) as Product
             intent.putExtra("id", selected.id)
             startActivity(intent)
+        }
+
+        fun addProduct(){
+
         }
     }
 
