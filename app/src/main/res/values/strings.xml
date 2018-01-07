@@ -8,6 +8,18 @@
 
     <string name="action_settings">Settings</string>
 
+    <string name="product_list_title">Productos</string>
     <string name="product_code">Código</string>
     <string name="product_name">Nombre</string>
+    <string name="product_description">Descripción</string>
+    <string name="product_quotation">Cotización</string>
+    <string name="product_priceInCurrency">Precio en Moneda</string>
+    <string name="product_costRmb">Costo RMB</string>
+    <string name="product_costCbm">Costo CBM</string>
+    <string name="product_unitsPerPackage">Unidades por Paquete</string>
+    <string name="product_grossWeight">Peso Bruto</string>
+    <string name="product_netWeight">Peso Neto</string>
+    <string name="product_observations">Observaciones</string>
+    <string name="product_created">Producto Creado</string>
+    <string name="product_updated">Producto Actualizado</string>
 </resources>

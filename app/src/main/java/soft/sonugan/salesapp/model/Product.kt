@@ -30,5 +30,5 @@ class Product(var code: String = "",
     var pending: Float? = null
     var barCode: String? = null
     var observations: String? = null
-    lateinit var provider: ToOne<Provider>
+    //lateinit var provider: ToOne<Provider>
 }

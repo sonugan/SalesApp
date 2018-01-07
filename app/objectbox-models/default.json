@@ -75,11 +75,6 @@
         {
           "id": "17:1501022627184088242",
           "name": "observations"
-        },
-        {
-          "id": "18:4055061138043836333",
-          "indexId": "1:6012519813633609152",
-          "name": "providerId"
         }
       ],
       "relations": []
@@ -124,8 +119,12 @@
   "modelVersion": 4,
   "modelVersionParserMinimum": 4,
   "retiredEntityUids": [],
-  "retiredIndexUids": [],
-  "retiredPropertyUids": [],
+  "retiredIndexUids": [
+    6012519813633609152
+  ],
+  "retiredPropertyUids": [
+    4055061138043836333
+  ],
   "retiredRelationUids": [],
   "version": 1
 }

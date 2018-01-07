@@ -1,4 +1,4 @@
-package soft.sonugan.salesapp
+package soft.sonugan.salesapp.Product
 
 import android.content.Context
 import android.content.Intent
@@ -12,26 +12,31 @@ import android.widget.BaseAdapter
 import android.widget.ListView
 import android.widget.TextView
 import io.objectbox.Box
+import io.objectbox.query.Query
 import kotlinx.android.synthetic.main.activity_product_list.*
+import soft.sonugan.salesapp.R
+import soft.sonugan.salesapp.SalesApp
 import soft.sonugan.salesapp.model.Product
-import soft.sonugan.salesapp.model.Provider
-import java.time.LocalDate
-import java.util.*
+import soft.sonugan.salesapp.model.Product_
 
 class ProductListActivity : AppCompatActivity() {
     private lateinit var productBox: Box<Product>
+    private lateinit var query : Query<Product>
 
-    var product1 = Product("1234", "Carne picada")
+    /*var product1 = Product("1234", "Carne picada")
     //product1.provider.setTarget(provider)
 
-    var product2 = Product("1235", "Salsa de carne")
-    internal var products = arrayOf(product1, product2)
+    var product2 = Product("1235", "Salsa de carne")*/
+    internal lateinit var products : List<Product>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_product_list)
 
-     //   productBox = (application as SalesApp).boxStore.boxFor(Product::class.java)
+        productBox = (application as SalesApp).boxStore.boxFor(Product::class.java)
+        query = productBox.query().order(Product_.code).build()
+
+        products = query.find()
 
         val listView : ListView = productList
         listView.adapter = ProductListAdapter(this, products)
@@ -42,13 +47,15 @@ class ProductListActivity : AppCompatActivity() {
             intent.putExtra("id", selected.id)
             startActivity(intent)
         }
-
-        fun addProduct(){
-
-        }
     }
 
-    private class ProductListAdapter(context : Context, private val products: Array<Product>) : BaseAdapter(){
+
+    fun addProduct(view: View){
+        var intent = Intent(applicationContext, ProductEditActivity::class.java)
+        startActivity(intent)
+    }
+
+    private class ProductListAdapter(context : Context, private val products: List<Product>) : BaseAdapter(){
         private val mInflator: LayoutInflater
 
         init {

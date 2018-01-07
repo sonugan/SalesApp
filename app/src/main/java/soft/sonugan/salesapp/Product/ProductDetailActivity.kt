@@ -1,11 +1,11 @@
-package soft.sonugan.salesapp
+package soft.sonugan.salesapp.Product
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_product_detail.*
+import soft.sonugan.salesapp.R
 
 class ProductDetailActivity : AppCompatActivity() {
 
