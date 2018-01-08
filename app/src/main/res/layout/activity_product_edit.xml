@@ -12,9 +12,9 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        android:text="@string/product_code"
+        android:hint="@string/product_code"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <EditText
         android:id="@+id/name"
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        android:text="@string/product_name"
+        android:hint="@string/product_name"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/code" />
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        android:text="@string/product_description"
+        android:hint="@string/product_description"
         app:layout_constraintTop_toBottomOf="@+id/name"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="numberDecimal"
-        android:text="@string/product_quotation"
+        android:hint="@string/product_quotation"
         app:layout_constraintTop_toBottomOf="@+id/description"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
@@ -55,7 +55,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="numberDecimal"
-        android:text="@string/product_priceInCurrency"
+        android:hint="@string/product_priceInCurrency"
         app:layout_constraintTop_toBottomOf="@+id/quotation"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
@@ -66,7 +66,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="numberDecimal"
-        android:text="@string/product_costRmb"
+        android:hint="@string/product_costRmb"
         app:layout_constraintTop_toBottomOf="@+id/priceInCurrency"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
@@ -77,7 +77,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="numberDecimal"
-        android:text="@string/product_costCbm"
+        android:hint="@string/product_costCbm"
         app:layout_constraintTop_toBottomOf="@+id/costRmb"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
@@ -88,7 +88,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        android:text="@string/product_unitsPerPackage"
+        android:hint="@string/product_unitsPerPackage"
         app:layout_constraintTop_toBottomOf="@+id/costCbm"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
@@ -99,7 +99,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="numberDecimal"
-        android:text="@string/product_grossWeight"
+        android:hint="@string/product_grossWeight"
         app:layout_constraintTop_toBottomOf="@+id/unitsPerPackage"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
@@ -110,7 +110,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="numberDecimal"
-        android:text="@string/product_netWeight"
+        android:hint="@string/product_netWeight"
         app:layout_constraintTop_toBottomOf="@+id/grossWeight"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
@@ -121,7 +121,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        android:text="@string/product_observations"
+        android:hint="@string/product_observations"
         app:layout_constraintTop_toBottomOf="@+id/netWeight"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>

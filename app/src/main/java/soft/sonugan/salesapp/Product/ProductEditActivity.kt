@@ -14,7 +14,9 @@ import soft.sonugan.salesapp.model.Product
 import android.R.attr.duration
 import android.content.Intent
 import android.widget.Toast
-
+import soft.sonugan.salesapp.EditTextValidator
+import soft.sonugan.salesapp.validatior.MultipleValidator
+import soft.sonugan.salesapp.validatior.RequiredValidator
 
 
 class ProductEditActivity : AppCompatActivity(), TextWatcher {
@@ -63,7 +65,9 @@ class ProductEditActivity : AppCompatActivity(), TextWatcher {
     }
 
     override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-
+        EditTextValidator(code, RequiredValidator()).validate()
+        EditTextValidator(name, RequiredValidator()).validate()
+        EditTextValidator(priceInCurrency, RequiredValidator()).validate()
     }
 
     override fun afterTextChanged(s: Editable?) {

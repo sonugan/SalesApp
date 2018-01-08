@@ -22,4 +22,6 @@
     <string name="product_observations">Observaciones</string>
     <string name="product_created">Producto Creado</string>
     <string name="product_updated">Producto Actualizado</string>
+
+    <string name="required_validation">El valor es requerido</string>
 </resources>
