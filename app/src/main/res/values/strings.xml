@@ -4,11 +4,14 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="nav_product_list">Productos</string>
+    <!--Menu-->
+    <string name="nav_product_list">Artículos</string>
+    <string name="nav_title">SalesApp</string>
 
     <string name="action_settings">Settings</string>
 
-    <string name="product_list_title">Productos</string>
+    <!--Product Activities-->
+    <string name="product_list_title">Artículos</string>
     <string name="product_code">Código</string>
     <string name="product_name">Nombre</string>
     <string name="product_description">Descripción</string>
@@ -20,8 +23,9 @@
     <string name="product_grossWeight">Peso Bruto</string>
     <string name="product_netWeight">Peso Neto</string>
     <string name="product_observations">Observaciones</string>
-    <string name="product_created">Producto Creado</string>
-    <string name="product_updated">Producto Actualizado</string>
+    <string name="product_created">Artículo Creado</string>
+    <string name="product_updated">Artículo Actualizado</string>
 
+    <!--Validations-->
     <string name="required_validation">El valor es requerido</string>
 </resources>
